@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Initiation BOOTSTRAP 4 : Diaporama</title>
+    <!-- Ma feuille de style -->
+    <link href="css/style.css" rel="stylesheet"> 
+</head>
+<body>
+    <!-- tout le contenu d'une page Bootstrapest dans une div class container -->
+    <div class="container">
+        <!-- Une navbar faite avec bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary"><!-- la nav est class navbar sur fond sombre, avec un bg (background) et s'étend sur un lg un écran large -->
+            <a href="index.html" class="navbar-brand">InitiationBootstrap 4</a>
+            <!-- le bouton pour le menu responsive -->
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"><!-- la ul est dans la div avec class id -->
+                <ul class="navbar-nav ml-auto"><!-- navbar-nav supprime les puces ml-auto empécher le débordement de la nav-bar-->
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="diaporama.html" class="nav-link active">Diaporama</a></li>
+                    <!-- Ici nous mettons un menu déroulant -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Voir nos produits</a><!-- les sous-rebriques de la rubrique produit dans une div class dropdown-menu -->
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Mer</a>
+                            <a href="#" class="dropdown-item">Montagne</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Autres choix</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Ici on va mettre une section en pleine largeur sous la nav "a hero section", chez Bootstrap un "Jumbatron" c'est un composant -->
+        <div class="jumbotron">
+            <h1 class="display-4">Les plus belles destinations de vacances</h1>
+            <!-- <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ex quae nulla facilis autem, molestiae odio possimus dolorum nihil, ipsam excepturi aut, neque pariatur? Enim omnis excepturi nihil maiores eaque?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ab odit distinctio numquam amet alias architecto, ipsa dolorum aperiam quidem tempore libero accusantium. Id commodi fugit omnis minus magni tempora!</p>
+            <p class="lead">
+            <a href="#" class="btn btn-lg btn-primary" role="botton">Préparez l'été ...</a>
+            </p> -->
+        </div><!-- fin de la div jumbotron -->
+        <div class="row mb-4">
+            
+        <div class="col-lg-12 center-block">
+            <div id="carousel01" class="carousel slide" data-ride="carousel">
+                <!-- Ici on place les indicateurs -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel01" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel01" data-slide-to="1"></li>
+                    <li data-target="#carousel01" data-slide-to="2"></li>
+                    <li data-target="#carousel01" data-slide-to="3"></li>
+                </ol>
+                <!-- le carousel est dans une div avec un id et sa class est data-ride -->
+                <div class="carousel-inner = interne">
+                    <!-- tous les items du diaporama sont dans une div avec la class carousel-inner -->
+                    <div class="carousel-item active">
+                        <img src="img/ibra.jpg" alt="panorama glacier" class="w-100 d-block">
+                        <!-- et ici la légende de la photo -->
+                        <div class="carousel-caption d-none d-md-block"><!-- -caption d-none d-md-block pour metre le texte sur la photo -->
+                            <h5>Le Parc Des Princes</h5>
+                            <p>Un stade mythique</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/champions-league.jpg" alt="panorama plage" class="w-100 d-block">
+                        <div class="carousel-caption d-none d-md-block">
+                            <!-- <h5>Ligue des Champions</h5>
+                            <p>Le plus beau trophée pour un club</p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/kylian.jpg" alt="panorama venise" class="w-100 d-block">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Toujour croire en c'est reves</h5>
+                            <p>Bondy 93</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/le_psg_d__voNeymar.jpg" alt="panorama montagne" class="w-100 d-block">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Neymar.Jr</h5>
+                            <p>Sera t'il toujour parisien l'année prochaine ???</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ici nous mettons les liens de controles du diaporama -->
+            <a href="#carousel01" role="button" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a> 
+            <!-- sr = screen reader -->
+            <a href="#carousel01" role="button" class="carousel-control-next" data-slide="next" >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
+        </div><!-- fin du diaporama -->
+    </div><!-- fin de rangée -->
+
+    <!-- ici commence la grille de Bootstrap avec une rangées et des colonnes : 3 colonnes-->
+    <div class="row">
+        <div class="col-sm-12 col-md-4"><!-- col-sm 12 sur écran small 12 col de largeur, sur un écran médium 4 col de largeur -->
+            <div class="card mb-4"><!-- mb-4 margin bottom -->
+                <div class="card-body text-center">
+                    <h5 class="card-title">Un titre h5 "card" / 1</h5>
+                    <p class="card-text">Un peu de texte dans une "carte" "a card"</p>
+                    <a href="#" class="card-link">Un lien...</a>
+                </div>
+            </div>
+        </div><!-- fin col 1 -->
+        <div class="col">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Un titre h5 "card" / 2</h5>
+                    <p class="card-text">Un peu de texte dans une "carte" "a card"</p>
+                    <a href="#" class="card-link">Un lien...</a>
+                </div>
+            </div>
+        </div><!-- fin col 2 -->
+        <div class="col">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Un titre h5 "card" / 3</h5>
+                    <p class="card-text">Un peu de texte dans une "carte" "a card"</p>
+                    <a href="#" class="card-link">Un lien...</a>
+                </div>
+            </div>
+        </div><!-- fin col 3 -->
+    </div><!-- fin de la div class row 1 -->
+    <!-- debut class row 2 -->
+    <div class="row mb-4">
+        <div class="col-lg-3 col-md-6 mb-4 text-center">
+            <img src="img/psg.jpg" alt="panorama aveiro" class="rounded">
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 text-center">
+            <img src="img/real.jpg" alt="panorama paris" class="rounded">
+        </div>
+        <div class="col-lg-3 mb-4 text-center">
+            <img src="img/manunited.jpg" alt="panorama aveiro02" class="rounded">
+        </div> 
+        <div class="col-lg-3 mb-4 text-center">
+                <img src="img/juventus.jpg" alt="panorama aveiro02" class="rounded">
+            </div> 
+    </div>
+
+        <!-- une nouvelle rangée 3 -->
+        <div class="row" ><!-- debut div row 3 -->
+            <div class="col-md-12 col-lg-3"><!-- debut col 1 -->
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Paris-Saint-Germain</h5><hr>
+                      <p class="card-text">Le Paris Saint-Germain Football Club, abrégé en Paris Saint-Germain FC, couramment appelé Paris Saint-Germain ou PSG, est un club de football français faisant partie du club omnisports du même nom, basé à Saint-Germain-en-Laye et à Paris.
+                      La date de fondation du club est discutable, celle de 1970 régulièrement avancée correspondant en réalité davantage au changement de nom du Stade saint-germanois, fondé en 1904, en Paris Saint-Germain Football Club à la suite du rapprochement avec l'association Paris Football Club, groupe d'investissement créé en 1969 dans le but de reformer une équipe professionnelle dans la capitale, après la chute sportive et financière du Racing Club de France et du Stade français à la fin des années 60.</p>
+                      <a href="https://fr.wikipedia.org/wiki/Paris_Saint-Germain_Football_Club" target="_blank" Votre lien class="card-link">L'histoire du PSG...</a>
+                    </div>
+                </div>
+            </div><!-- fin col 1 -->
+            <div class="col-md-6 col-lg-3"><!-- debut col 2 -->
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Réal Madrid</h5><hr>
+                      <p class="card-text">Le Real Madrid Club de Fútbol, plus connu sous le nom de Real Madrid (souvent réduit à Real ou, en Espagne, El Madrid) est un club professionnel espagnol de football, basé à Madrid. Vainqueur de très nombreux titres nationaux et internationaux, il a reçu de la Fédération internationale de football association (FIFA) le titre honorifique de plus grand club du XXe siècle.
+                      Fondé en 1902 par Julián Palacios et les frères Juan y Carlos Padrós le club se voit accorder le titre Real (signifiant « Royal » en espagnol) par le roi Alphonse XIII d'Espagne en 1920. Le Real Madrid s'impose au sommet du football européen au milieu des années 1950, sous la présidence de Santiago Bernabéu, en remportant notamment les cinq premières éditions de la Coupe d'Europe des clubs champions.</p>
+                      <a href="https://fr.wikipedia.org/wiki/Real_Madrid_Club_de_F%C3%BAtbol" target="_blank">L'histoire du Réal Madrid...</a> 
+                    </div>
+                </div>
+            </div><!-- fin col 2 -->
+            <div class="col-md-6 col-lg-3"><!-- debut col 3 -->
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Manchester United</h5><hr>
+                      <p class="card-text">Le club est créé en 1878 par de simples employés de la compagnie ferroviaire de Lancashire et Yorkshire Railway Company qui accepte de parrainer leur équipe sous le nom de : Newton Heath Lancashire et Yorkshire Railway. Il joue alors dans le stade de North Road à Newton Heath1.
+                      Le club se fait vite une réputation en jouant contre les autres équipes de leur entreprise comme contre celles extérieures. Entre 1882 et 1883, l'équipe gagne 26 matchs amicaux et participe à la Lancashire Cup. Toutefois, ceux-ci sont sèchement battus dès le premier tour par la réserve de Blackburn Olympic, l'équipe gagnante de la dernière FA Cup, 7-22. Les joueurs décident alors de trouver une compétition plus à leur portée et jouent dans la Manchester and District Challenge Cup en 1884.Pirlo.</p>
+                      <a href="https://fr.wikipedia.org/wiki/Histoire_de_Manchester_United" target="_blank">L'histoire de Manchester United...</a> 
+                    </div>
+                </div>
+            </div><!-- fin col 3 -->
+            <div class="col-md-6 col-lg-3"><!-- debut col 3 -->
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Juventus</h5><hr>
+                      <p class="card-text">La Juventus Football Club (du latin iuventūs : jeunessenote 2, prononcé : [juˈvɛntus]), plus communément appelée la Juventus ou bien la Juventus de Turin en français, et familièrement la Juve (prononcer : [ˈjuːve]), mais également surnommée la Vecchia Signora (la Vieille Dame) ou bien encore les Bianconeri (les Blancs et Noirs), est un club de football professionnel italien (également S.p.A., société par actions) basé dans la ville de Turin, dans la région du Piémont, dans le nord de l'Italie.
+                      Troisième plus ancien du genre dans le pays après le Genoa Cricket and Football Club et Udinese Calcio, le club est fondé le 1er novembre 1897 en tant que club omnisports sous le nom de Sport Club Juventus par un groupe de jeunes étudiants turinois4 et lié à la puissante famille industrielle Agnelli.</p>
+                      <a href="https://fr.wikipedia.org/wiki/Juventus_Football_Club" target="_blank">L'histoire de la Juventus de Turin...</a> 
+                    </div>
+                </div>
+            </div><!-- fin col 3 -->
+            
+        </div><!-- fin div row 3 -->
+    </div><!-- fin de la div class container -->
+    <footer class="mt-1">
+        <div class="container bg-primary">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card-footer text-center text-warning">
+                        <div class="card-body">
+                            <p class="card-text">Le pied de page, c'est le pied !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </footer><!-- fin du footer -->
+    <!-- Optional Java script -->
+    <!-- jQuery first, then Popper.js, then bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
